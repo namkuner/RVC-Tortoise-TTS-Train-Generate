@@ -63,7 +63,7 @@ class Config:
     def load_config_json() -> dict:
         d = {}
         for config_file in version_config_list:
-            with open(f"modules/rvc/configs/{config_file}", "r") as f:
+            with open(f"rvc/configs/{config_file}", "r") as f:
                 d[config_file] = json.load(f)
         return d
 
@@ -151,9 +151,9 @@ class Config:
                 + 0.4
             )
             if self.gpu_mem <= 4:
-                with open("modules/rvc/infer/modules/train/preprocess.py", "r") as f:
+                with open("rvc/infer/modules/train/preprocess.py", "r") as f:
                     strr = f.read().replace("3.7", "3.0")
-                with open("modules/rvc/infer/modules/train/preprocess.py", "w") as f:
+                with open("rvc/infer/modules/train/preprocess.py", "w") as f:
                     f.write(strr)
         elif self.has_mps():
             logger.info("No supported Nvidia GPU found")

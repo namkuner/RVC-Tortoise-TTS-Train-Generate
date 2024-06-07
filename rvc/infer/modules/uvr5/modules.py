@@ -8,8 +8,8 @@ import ffmpeg
 import torch
 
 from configs.config import Config
-from modules.rvc.infer.modules.uvr5.mdxnet import MDXNetDereverb
-from modules.rvc.infer.modules.uvr5.preprocess import AudioPre, AudioPreDeEcho
+from rvc.infer.modules.uvr5.mdxnet import MDXNetDereverb
+from rvc.infer.modules.uvr5.preprocess import AudioPre, AudioPreDeEcho
 
 config = Config()
 

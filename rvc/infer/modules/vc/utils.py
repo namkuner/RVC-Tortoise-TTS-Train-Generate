@@ -4,7 +4,7 @@ from fairseq import checkpoint_utils
 
 
 def get_index_path_from_model(sid):
-    target_folder = "modules/rvc/assets/index/"
+    target_folder = "rvc/assets/index/"
     return next(
         (
             f
@@ -22,7 +22,7 @@ def get_index_path_from_model(sid):
 
 def load_hubert(config):
     models, _, _ = checkpoint_utils.load_model_ensemble_and_task(
-        ["modules/rvc/assets/hubert/hubert_base.pt"],
+        ["rvc/assets/hubert/hubert_base.pt"],
         suffix="",
     )
     hubert_model = models[0]

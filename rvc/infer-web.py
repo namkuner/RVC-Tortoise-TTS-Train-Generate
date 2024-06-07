@@ -23,14 +23,14 @@ from sklearn.cluster import MiniBatchKMeans
 
 from configs.config import Config
 from i18n.i18n import I18nAuto
-from modules.rvc.infer.lib.train.process_ckpt import (
+from rvc.infer.lib.train.process_ckpt import (
     change_info,
     extract_small_model,
     merge,
     show_info,
 )
-from modules.rvc.infer.modules.uvr5.modules import uvr
-from modules.rvc.infer.modules.vc.modules import VC
+from rvc.infer.modules.uvr5.modules import uvr
+from rvc.infer.modules.vc.modules import VC
 
 logging.getLogger("numba").setLevel(logging.WARNING)
 
@@ -166,7 +166,7 @@ def clean():
 
 
 def export_onnx():
-    from modules.rvc.infer.modules.onnx.export import export_onnx as eo
+    from rvc.infer.modules.onnx.export import export_onnx as eo
 
     eo()
 

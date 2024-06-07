@@ -7,8 +7,8 @@ import sys
 import torch
 
 from multiprocessing import cpu_count
-from src.rvc.infer.modules.vc.modules import VC
-from src.rvc.configs.config import Config
+from rvc.infer.modules.vc.modules import VC
+from rvc.configs.config import Config
 
 from scipy.io import wavfile
 

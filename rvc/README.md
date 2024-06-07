@@ -24,7 +24,7 @@ This is a fork of RVC and may not contain the latest features.  It is mainly use
 
 ------
 
-[**English**](docs/en/README.en.md) | [**中文简体**](README.md) | [**日本語**](docs/jp/README.ja.md) | [**한국어**](docs/kr/README.ko.md) ([**韓國語**](docs/kr/README.ko.han.md)) | [**Français**](docs/fr/README.fr.md)| [**Türkçe**](docs/tr/README.tr.md)
+[**English**](./docs/en/README.en.md) | [**中文简体**](./README.md) | [**日本語**](./docs/jp/README.ja.md) | [**한국어**](./docs/kr/README.ko.md) ([**韓國語**](./docs/kr/README.ko.han.md)) | [**Français**](./docs/fr/README.fr.md)| [**Türkçe**](./docs/tr/README.tr.md)
 
 点此查看我们的[演示视频](https://www.bilibili.com/video/BV1pm4y1z7Gm/) !
 

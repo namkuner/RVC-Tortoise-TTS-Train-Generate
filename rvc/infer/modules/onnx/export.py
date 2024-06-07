@@ -1,6 +1,6 @@
 import torch
 
-from modules.rvc.infer.lib.infer_pack.models_onnx import SynthesizerTrnMsNSFsidM
+from rvc.infer.lib.infer_pack.models_onnx import SynthesizerTrnMsNSFsidM
 
 
 def export_onnx(ModelPath, ExportedPath):
