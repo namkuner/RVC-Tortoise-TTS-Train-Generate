@@ -19,8 +19,8 @@ from datetime import datetime
 import tortoise.api
 from tortoise.utils.audio import get_voice_dir, get_voices
 from tortoise.utils.device import get_device_count
-from src.tortoise_dataset_tools.dataset_whisper_tools.dataset_maker_large_files import *
-from src.tortoise_dataset_tools.dataset_whisper_tools.combine_folders import *
+from tortoise_dataset_tools.dataset_whisper_tools.dataset_maker_large_files import *
+from tortoise_dataset_tools.dataset_whisper_tools.combine_folders import *
 
 from utils import *
 
@@ -340,7 +340,7 @@ def transcribe_other_language_proxy(voice, language, chunk_size, continuation_di
         new_dataset_dir = os.path.join(processed_folder, f"run_{current_datetime}")
         os.rename(dataset_dir, new_dataset_dir)
 
-    from src.tortoise_dataset_tools.audio_conversion_tools.split_long_file import get_duration, process_folder
+    from tortoise_dataset_tools.audio_conversion_tools.split_long_file import get_duration, process_folder
     chosen_directory = os.path.join("./voices", voice)
     items = os.listdir(chosen_directory)
     for file in items:
@@ -366,7 +366,7 @@ def transcribe_other_language_proxy(voice, language, chunk_size, continuation_di
             pass
             
     progress(0.0, desc="Converting to MP3 files") # add tqdm later
-    import src.tortoise_dataset_tools.audio_conversion_tools.convert_to_mp3 as c2mp3
+    import tortoise_dataset_tools.audio_conversion_tools.convert_to_mp3 as c2mp3
     
     # Hacky way to get the functions working without changing where they output to...
     for item in os.listdir(chosen_directory):
@@ -438,8 +438,8 @@ def make_bpe_tokenizer_proxy(voice, language, progress=gr.Progress(track_tqdm=Tr
     bpe_text_path = os.path.join(training_folder, "bpe_train.txt")
     tokenizer_path = os.path.join("models", "tokenizers", f"{language}_tokenizer.json")
     
-    from src.tortoise_dataset_tools.bpe_tokenizer_tools.extract_text_from_train_dataset import extract_transcripts
-    from src.tortoise_dataset_tools.bpe_tokenizer_tools.train_bpe_tokenizer import train_tokenizer
+    from tortoise_dataset_tools.bpe_tokenizer_tools.extract_text_from_train_dataset import extract_transcripts
+    from tortoise_dataset_tools.bpe_tokenizer_tools.train_bpe_tokenizer import train_tokenizer
     
     progress(0, desc="Extracting transcripts")
     extract_transcripts(train_text_path, bpe_text_path)
